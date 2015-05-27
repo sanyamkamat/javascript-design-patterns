@@ -49,3 +49,20 @@ book.onPriceChanged(function (b) {
 book.price(19.99);
 
 book.price(200);
+
+/*
+ * Using ES5 properties
+ */
+
+function Person() {
+    var name = "";
+    Object.defineProperty(this, 'name', {
+        get: function () {
+            return name;
+        },
+        set: function (val) {
+            console.log(val);
+            name = val;
+        }
+    });
+}
